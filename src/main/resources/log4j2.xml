@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <!--<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %msg%n"/>-->
+            <PatternLayout
+                    disableAnsi="false"
+                    pattern="%highlight{%d{HH:mm:ss.SSS}  %-5level %c{1}:%L %msg%n}{FATAL=red blink, ERROR=red, WARN=yellow, INFO=black, DEBUG=blue, TRACE=green}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="TRACE">
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
